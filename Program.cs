@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using HotelDatabaseOpgave;
 
+//Remember to insert connection string in DBClient before testing
+
 //CREATE - Inserts a new Facility
 //Uncomment to test:
 
@@ -11,7 +13,7 @@ using HotelDatabaseOpgave;
 
 //new DBClient().ReadFacility();
 
-// READ 2 - Prints specific Facility:
+//READ 2 - Prints specific Facility:
 // Uncomment to test:
 
 //new DBClient().ReadSpecificFacility();

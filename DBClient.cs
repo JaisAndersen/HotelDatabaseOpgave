@@ -12,9 +12,10 @@ namespace HotelDatabaseOpgave
 {
     public class DBClient
     {
+        string connectionString = //"INSERT Connection string here and uncomment";
+
         public void ReadFacility()
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             string queryString = "select * from Facility";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -34,8 +35,7 @@ namespace HotelDatabaseOpgave
 
         public void ReadSpecificFacility()
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            string queryString2 = "select * from Facility where Facility_No = 4";
+            string queryString2 = "select * from Facility where Facility_No = 5";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString2, connection);
@@ -54,7 +54,6 @@ namespace HotelDatabaseOpgave
 
         public void CreateFacility()
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             string queryString3 = "Insert into Facility Values ('5', 'Cykeludlejning')";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -66,7 +65,6 @@ namespace HotelDatabaseOpgave
 
         public void UpdateFacility()
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             string queryString4 = "Update Facility set Name = 'Hundefrisør' Where Facility_No = '5'";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -78,7 +76,6 @@ namespace HotelDatabaseOpgave
 
         public void DeleteFacillity()
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             string queryString4 = "Delete from Facility where Facility_No = '5'";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
